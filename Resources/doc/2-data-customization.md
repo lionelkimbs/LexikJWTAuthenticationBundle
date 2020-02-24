@@ -317,7 +317,7 @@ Thanks to this event, you can set a custom response.
 # config/services.yaml
 services:
     acme_api.event.jwt_invalid_listener:
-        class: App\EventListener\JWTInvalidListener
+        class: App\EventListener\JWTNotFoundListener
         tags:
             - { name: kernel.event_listener, event: lexik_jwt_authentication.on_jwt_not_found, method: onJWTNotFound }
 ```
